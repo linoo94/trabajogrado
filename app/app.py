@@ -120,6 +120,13 @@ def mostrar():
 
     return render_template('mostrar.html',mostrar=dato)
 
+#Marcelino_26/07/2024
+# Sirve para mostrar la informacion de la datatable 
+@app.route('/data', methods=['GET'])
+def get_data():
+    table_name = 'cases'
+    data = list(r.db('lawfirm').table(table_name).run(conn))
+    return jsonify(data)
 
 if __name__ == '__main__':
     if not os.path.exists(UPLOAD_FOLDER):
