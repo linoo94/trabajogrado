@@ -120,6 +120,7 @@ def mostrar():
 
     return render_template('mostrar.html',mostrar=dato)
 
+#Marcelino
 
 if __name__ == '__main__':
     if not os.path.exists(UPLOAD_FOLDER):
